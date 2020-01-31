@@ -1,0 +1,55 @@
+from predicteur_app.models import Patient
+
+patient = Patient(
+    chest_ACC_x        = 0.5,
+    chest_ACC_y        = -0.06,
+    chest_ACC_z        = -0.37,
+    chest_Resp         = 4.14,
+    chest_ECG          = 0.01,
+    wrist_ACC_x        = -0.7,
+    wrist_ACC_y        = -0.7,
+    wrist_ACC_z        = -0.7,
+    wrist_BVP          = 32.13,
+    wrist_TEMP         = 34.37,
+    WEIGHT             = 82.0,
+    Gender             = 1.0,
+    AGE                = 45.0,
+    HEIGHT             = 182.0,
+    SKIN               = 5.0,
+    SPORT              = 6.0,
+    Rpeaks             = 0.0)
+
+patient.save()
+
+
+
+
+from predicteur_app.models import Patient
+from predicteur_app.serializers import PatientSerializer
+from rest_framework.parsers import JSONParser
+from rest_framework.renderers import JSONRenderer
+
+
+patient = Patient(
+    chest_ACC_x        = 0.5,
+    chest_ACC_y        = -0.06,
+    chest_ACC_z        = -0.37,
+    chest_Resp         = 4.14,
+    chest_ECG          = 0.01,
+    wrist_ACC_x        = -0.7,
+    wrist_ACC_y        = -0.7,
+    wrist_ACC_z        = -0.7,
+    wrist_BVP          = 32.13,
+    wrist_TEMP         = 34.37,
+    WEIGHT             = 82.0,
+    Gender             = 1.0,
+    AGE                = 45.0,
+    HEIGHT             = 182.0,
+    SKIN               = 5.0,
+    SPORT              = 6.0,
+    Rpeaks             = 0.0,
+    Label              = 79.8
+)
+
+patient.save()
+
